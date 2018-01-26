@@ -1,0 +1,9 @@
+<script>
+// Adds placeholders to text boxes automatically
+$('.en__field--text').each(function(){
+	var input = $(this).find('input');
+	var label = $(this).find('label');
+	var labelText = label.text();
+	input.attr('placeholder', labelText);
+});
+</script>
