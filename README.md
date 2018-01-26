@@ -1,4 +1,4 @@
-# page-builder-code-blocks
+###page-builder Code Blocks
 
 Code Blocks can contain styles and javascript that only runs when you preview or load the live page. They can add extra functionality to your pages.
 
