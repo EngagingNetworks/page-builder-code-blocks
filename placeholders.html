@@ -6,7 +6,7 @@
 		var labelText = label.text();
 		// Add * to placeholder if mandatory
 		if ( input.parent().parent().hasClass("en__mandatory") ) {
-		labelText += "*";
+			labelText += "*";
 		}
 		var parent = input.parent().parent().attr("class");
 		input.attr('placeholder', labelText);
