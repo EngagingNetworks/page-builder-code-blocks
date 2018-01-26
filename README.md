@@ -6,6 +6,6 @@ Note that these need to be thoroughly tested by you before launching your page! 
 
 Many of these code blocks assume you have the jQuery library. If you do not, then you can add it via a line in your template's <head>:
   
-```
+```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 ```
