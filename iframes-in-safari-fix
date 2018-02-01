@@ -1,0 +1,5 @@
+<script>
+    if(window.location.href.search('#bounced') == -1){
+        window.location.replace('https://politicalnetworks.com/page/11134/action/1');
+    }
+</script>
