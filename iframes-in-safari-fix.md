@@ -1,7 +1,7 @@
-#Safari iframe fix
+# Safari iframe fix
 Embedded email-to-target pages can sometimes fail to load properly in Safari. This fix essentially makes the browser trust the domain of the iframe by reloading it. There are a few components:
 
-##Create a page that can bounce requests
+## Create a page that can bounce requests
 This page should be a static page with a code block on. It sends you back from whence you came.
 ```html
 <script>
@@ -9,7 +9,7 @@ This page should be a static page with a code block on. It sends you back from w
 </script>
 ```
 
-##In the parent website that contains the iframe, add this code before the iframe, using the URL of the bouncer in place of the URL in the sample code
+## In the parent website that contains the iframe, add this code before the iframe, using the URL of the bouncer in place of the URL in the sample code
 ```html
 <script>
     if(window.location.href.search('#bounced') == -1){
