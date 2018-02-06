@@ -19,7 +19,7 @@
             element = document.querySelector('meta[property="og:url"]');
             var wShareURL = element && element.getAttribute("content");
             
-            // Make up HTML
+            // Make up HTML of button
             wShareText = encodeURIComponent(wShareTitle) + " " + encodeURIComponent(wShareURL);
             var wURL = "whatsapp://send?text=" + wShareText;
             var wHTML = "<div class='en__share en__share--whatsapp en__share--simple'>" +
