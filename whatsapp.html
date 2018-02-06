@@ -1,0 +1,35 @@
+<!-- This script should add a Whatsapp button next to your social buttons. -->
+<!-- You will need to have set the social settings for this to work. -->
+<!-- You will only see the button on mobiles & tablets. -->
+
+<script>
+    $(document).ready(function() {
+        
+        // Only do this for non-desktops
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            
+            // Set icon image
+            var wImageURL = "https://3c0d23e7a981a879a552-8603a08f860114e3e943dbcefaddc15c.ssl.cf5.rackcdn.com/79/whatsapp_PNG1.png?v=1496933411000";
+            
+            // Get data from meta tags
+            var element = document.querySelector('meta[property="og:description"]');
+            var wShareText = element && element.getAttribute("content");
+            element = document.querySelector('meta[property="og:title"]');
+            var wShareTitle = element && element.getAttribute("content");
+            element = document.querySelector('meta[property="og:url"]');
+            var wShareURL = element && element.getAttribute("content");
+            
+            // Make up HTML
+            wShareText = encodeURIComponent(wShareTitle) + " " + encodeURIComponent(wShareURL);
+            var wURL = "whatsapp://send?text=" + wShareText;
+            var wHTML = "<div class='en__share en__share--whatsapp en__share--simple'>" +
+                "<a class='en__share__button en__share__button--simple en__share__button--whatsapp' " +
+                "href='" + wURL + "'>" +
+                "<img src='" + wImageURL + "'></a></div>"
+            
+            // Place HTML
+            $( ".en__shares" ).append( wHTML );
+        }
+
+    });
+</script>
