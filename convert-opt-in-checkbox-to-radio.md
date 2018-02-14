@@ -15,8 +15,10 @@ To implement:
 3) Edit the page and add a new code block below the checkbox. Clear the contents and amend the ```optInField``` and ```optInInputID``` so they are the same values as you discovered 
 4) View and test
 
+**How to find the IDs of your opt-in**
 ![How to find the variables](https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/convert-checkbox-to-radio.png?raw=true)
 
+**Code block**
 ``` html
 <script>
     // This script takes a checkbox opt-in and converts it to a radio opt-in
