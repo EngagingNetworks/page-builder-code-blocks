@@ -1,3 +1,4 @@
+``` html
 <script>
     // This script takes a checkbox opt-in and converts it to a radio opt-in
     // This can be useful for testing how supporters react to opt-in type
@@ -21,3 +22,4 @@
     // Add additional radio
     $("." + optInField + " .en__field__item").after ( $(newRadio) );
 </script>
+```
