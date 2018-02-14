@@ -32,6 +32,9 @@ To implement:
     var radioYesLabel = "Yes";
     var radioNoLabel = "No";
     // Convert checkbox
+    $("." + optInField).removeClass("en__field--checkbox").addClass("en__field--radio");
+    $("." + optInField + " .en__field__element").removeClass("en__field__element--checkbox").addClass("en__field__element--radio");
+    $("." + optInField + " input").removeClass("en__field--checkbox").addClass("en__field--radio");
     $("." + optInField + " input").attr("type","radio");
     $("." + optInField + " input").removeClass("en__field__input--checkbox").addClass("en__field__input--radio");
     $("." + optInField + " .en__field__item label").text(radioYesLabel);
