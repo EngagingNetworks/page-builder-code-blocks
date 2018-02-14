@@ -15,7 +15,7 @@ To implement:
 3) Edit the page and add a new code block below the checkbox. Clear the contents and amend the ```optInField``` and ```optInInputID``` so they are the same values as you discovered 
 4) View and test
 
-!https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/convert-checkbox-to-radio.png
+![How to find the variables](!https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/convert-checkbox-to-radio.png)
 
 ``` html
 <script>
