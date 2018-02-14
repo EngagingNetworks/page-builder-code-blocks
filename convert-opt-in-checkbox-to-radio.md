@@ -8,10 +8,10 @@ To implement:
 
 1) Create your page as normal
 2) Get the field name and ID of the checkbox - the method is:
-    a) Preview the page
-    b) Right-click and choose "Inspect" or "Inspect Element"
-    c) In the window that appears, click the arrow icon and click on your checkbox opt-in. The HTML for it should show
-    d) View the HTML to find the element name and ID. For example, in the image below you can see that the last class listed in the topmost div of the opt-in is ```en__fieldcat-opt-in``` and the ID is ```19328``` https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1757/convert-checkbox-to-radio.png?v=1518609659000. Yours will differ
+    1) Preview the page
+    2) Right-click and choose "Inspect" or "Inspect Element"
+    3) In the window that appears, click the arrow icon and click on your checkbox opt-in. The HTML for it should show
+    4) View the HTML to find the element name and ID. For example, in the image below you can see that the last class listed in the topmost div of the opt-in is ```en__fieldcat-opt-in``` and the ID is ```19328``` https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1757/convert-checkbox-to-radio.png?v=1518609659000. Yours will differ
 3) Edit the page and add a new code block below the checkbox. Clear the contents and amend the ```optInField``` and ```optInInputID``` so they are the same values as you discovered 
 4) View and test
 
