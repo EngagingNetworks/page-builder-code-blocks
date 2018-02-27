@@ -7,7 +7,7 @@
     $(optOut).click(function() { checkOptOut () });
     
     function checkOptOut() {
-    	if ( $(optIn + " input[value='N']").is(':checked') ) {
+    	if ( $(optOut + " input[value='N']").is(':checked') ) {
     		$(".optOutMessage").show();
     	} else {
     		$(".optOutMessage").hide();
