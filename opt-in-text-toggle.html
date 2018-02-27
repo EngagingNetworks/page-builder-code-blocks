@@ -2,9 +2,11 @@
     // This will toggle a text-block with the class "optOutMessage" if a supporter selects No from a radio Opt-in
     // You can then add text there to check that the supporter is sure about this
     // NOTE: You will need to change line var optIn = ".en__field--opt-in" to be the class of your own opt-in field
-    checkOptOut();
+    
     var optOut = ".en__field--opt-in"; // change this line
     $(optOut).click(function() { checkOptOut () });
+    
+    checkOptOut();
     
     function checkOptOut() {
     	if ( $(optOut + " input[value='N']").is(':checked') ) {
