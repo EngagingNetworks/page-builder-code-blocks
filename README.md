@@ -26,6 +26,9 @@ Create and place a random email address - useful for anonymous actions
 https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/opt-in-text-toggle.html
 Show and hide an alert if the supporter chooses No for a radio opt-in
 
+https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/pre-tick-and-hide-checkbox-opt-in.html
+Pre-tick and hide a checkbox opt-in
+
 https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/convert-opt-in-checkbox-to-radio.md
 Change a checkbox opt-in to a radio on that page only. Good for testing
 
