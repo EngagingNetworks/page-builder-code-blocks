@@ -21,6 +21,9 @@ https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/email-a
 Create and place a random email address - useful for anonymous actions
 https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/anonymous-random-email-address.html
 
+Disable the submit button until the supporter presses a key inside the email-to-target message (to force them to edit it)
+https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/disable-submit-until-message-keypress.html
+
 ## Opt-in code
 
 Show and hide an alert if the supporter chooses No for a radio opt-in
