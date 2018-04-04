@@ -9,6 +9,14 @@ Many of these code blocks assume you have the jQuery library loaded in your temp
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 ```
+## Where to put the code block
+The code block's position is important - if it is responding to a part of the page but it loads before it, it may not work. It is good to position the block at the bottom of your pages. Sometimes, you may want to wrap the code up in a ready event - this is so that it will only fire once the page has fully loaded:
+
+```javascript
+$( document ).ready(function() {
+    // your code here
+});
+```
 
 ## Inputs code
 
