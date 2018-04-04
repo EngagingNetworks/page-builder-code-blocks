@@ -47,7 +47,3 @@ https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/social-
 
 Add a Whatsapp sharing button for mobiles
 https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/whatsapp.html
-
-## Other code
-Needs testing - authorise iframes to use cookies
-https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/iframes-in-safari-fix.md
