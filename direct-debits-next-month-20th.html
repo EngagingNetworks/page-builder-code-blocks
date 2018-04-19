@@ -1,0 +1,23 @@
+<script>
+  var today = new Date();
+
+  var todayMonth = today.getMonth() + 1;
+  var todayYear = today.getFullYear();
+  var ddDay = "20";
+
+  ddMonth = todayMonth + 1;
+  ddMonth.toString();
+  ddYear = todayYear;
+
+  if (ddMonth > 12) {
+    ddMonth = 1;
+    ddYear++;
+  }
+  if (ddMonth < 10) {
+    ddMonth = "0" + ddMonth + "";
+  }
+
+  var ddDate = ddDay + "/" + ddMonth + "/" + ddYear;
+  
+  $("#en__field_supporter_NOT_TAGGED_7").val(ddDate);
+</script>
