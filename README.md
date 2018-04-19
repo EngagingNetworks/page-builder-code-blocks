@@ -45,8 +45,11 @@ https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/convert
 
 ## Donation pages code
 
-This code chooses the next two available dates on the 1st or 15th of the month
+This code chooses the next two available start dates on the 1st or 15th of the month
 https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/direct-debits-next-two-possible-dates.html
+
+This code chooses the next available start date as the 20th of next month
+https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/direct-debits-next-month-20th.html
 
 ## Social code
 
