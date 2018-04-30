@@ -58,3 +58,8 @@ https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/social-
 
 Add a Whatsapp sharing button for mobiles
 https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/whatsapp.html
+
+## Other
+
+Alert supporters if their browser does not support TLS 1.1 or above (see http://support.engagingnetworks.net/manually-enabling-tls-11-andor-tls-12-protocols-web-browsers for more information)
+http://support.engagingnetworks.net/manually-enabling-tls-11-andor-tls-12-protocols-web-browsers
