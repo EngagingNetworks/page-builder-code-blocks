@@ -1,18 +1,17 @@
 <script>
-window.parseTLSinfo = function(data) {
-  var message = 'Please upgrade to a browser with TLS 1.2 support. For assistance, contact info@xxx.com';
-  var version = data.tls_version.split(' ');
-  var sslFail = version[0] != 'TLS' || version[1] < 1.2;
-  
-  if(sslFail){
-    var errorList = document.getElementsByClassName('en__errorList');
-    var error = document.createElement('li');
-    error.innerHTML = message;
-    error.className = 'en__error';
-    errorList[0].appendChild(error);
+  // Place this in your template's footer
+  window.parseTLSinfo = function(data) {
+    var message = 'Please upgrade to a browser with TLS 1.2 support. For assistance, contact info@xxx.com';
+    var version = data.tls_version.split(' ');
+    var sslFail = version[0] != 'TLS' || version[1] < 1.2;
 
-
-  }
-};
+    if(sslFail){
+      var errorList = document.getElementsByClassName('en__errorList');
+      var error = document.createElement('li');
+      error.innerHTML = message;
+      error.className = 'en__error';
+      errorList[0].appendChild(error);
+    }
+  };
 </script>
 <script src="https://www.howsmyssl.com/a/check?callback=parseTLSinfo"></script>
