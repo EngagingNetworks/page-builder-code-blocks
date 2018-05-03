@@ -1,0 +1,24 @@
+<script>
+    // Add paragraphs to hold counter
+    $("textarea").each(function( index ) {
+        var counterClass = "textareaCounter" + index;
+        var counterHTML = "<p class='" + counterClass + "'></p>"
+        $(this).after(counterHTML);
+        updateCounter(counterClass);
+    });
+	
+    // Check for key presses
+    $("textarea").on('keyup',function(event) {
+        var index = $( "textarea" ).index( this );
+        updateCounter("textareaCounter" + index);
+    });
+    
+    // Update counter
+    function updateCounter(counterClass) {
+        var remaining;
+        var total = $("." + counterClass).siblings("textarea").val().length;
+        var maxLength =  $("." + counterClass).siblings("textarea").attr("maxlength");
+        remaining = maxLength - total;
+        $("." + counterClass).text(remaining);
+    }
+</script>
