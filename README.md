@@ -24,7 +24,7 @@ Add placeholders within text boxes that match the input's label
 https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/placeholders.html
 
 Do not allow spaces in an email address field
-https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/email-address-do-not-allow-spaces.js
+https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/email-address-do-not-allow-spaces.html
 
 Create and place a random email address - useful for anonymous actions
 https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/anonymous-random-email-address.html
