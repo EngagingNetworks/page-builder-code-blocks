@@ -1,5 +1,4 @@
 // This code makes it impossible to type or paste spaces into the email address field
-// This helps with the autocomplete issue which can sometimes add a trailing space
 $( document ).ready(function() {
   
   $(function(){
