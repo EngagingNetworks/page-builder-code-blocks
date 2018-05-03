@@ -32,6 +32,9 @@ https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/anonymo
 Disable the submit button until the supporter presses a key inside the email-to-target message (to force them to edit it)
 https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/disable-submit-until-message-keypress.html
 
+Field masks, e.g. for phone numbers or credit card numbers
+https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/field-masks.html
+
 ## Opt-in code
 
 Show and hide an alert if the supporter chooses No for a radio opt-in
