@@ -38,6 +38,9 @@ https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/field-m
 Change the error text for a specific field
 https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/change-error-text-for-a-single-field.html
 
+Counters for characters remaining in textareas
+https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/textarea-characters-remaining.html
+
 ## Opt-in code
 
 Show and hide an alert if the supporter chooses No for a radio opt-in
