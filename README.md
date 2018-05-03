@@ -18,7 +18,7 @@ $( document ).ready(function() {
 });
 ```
 
-## Inputs code
+## Fields code
 
 Add placeholders within text boxes that match the input's label
 https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/placeholders.html
@@ -34,6 +34,9 @@ https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/disable
 
 Field masks, e.g. for phone numbers or credit card numbers
 https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/field-masks.html
+
+Change the error text for a specific field
+https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/change-error-text-for-a-single-field.html
 
 ## Opt-in code
 
