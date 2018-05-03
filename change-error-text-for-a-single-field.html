@@ -1,0 +1,11 @@
+<script>
+    // All mandatory errors have the same text so cannot be tailored to different inputs
+    // To change it for a specific input, this js listens for when the error div is created
+    var eleToCheck = ".en__field--emailAddress"; // The field class to check - include the leading .
+    var eleError = ".en__field__error";
+    var newErrorText = "Where is your email address??"; // The error text to display
+    $(eleToCheck).on('DOMNodeInserted', eleError, function() {
+    	$(eleToCheck).off('DOMNodeInserted'); // stops function from running again when we change text in next step
+    	$(eleToCheck + " " + eleError).text(newErrorText); 
+    });
+</script>
