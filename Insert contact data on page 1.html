@@ -1,0 +1,76 @@
+<style>
+    .en__submit button:disabled {
+        background-color: #ccc;
+    }
+</style>
+<script>
+$( document ).ready(function() {
+    // Lookup event triggering
+    authorityLookup();
+    $('input[name$="postcode"]').change(function() {
+        console.log("postcode change");
+        setTimeout(
+          function() 
+          {
+            authorityLookup();
+          }, 1000);
+        
+    });
+    // For PCA predict, we need to fire the Postcode change event when Address 1 changes after a delay
+    $('input[name$="supporter.address1"]').change(function() {
+        console.log("add1 change");
+        // wait a bit
+        setTimeout(
+          function() 
+          {
+            // trigger postcode change
+            $('input[name$="postcode"]').trigger( "change" );
+          }, 1000);
+    });
+    // Function to lookup authority from postcode
+    function authorityLookup() {
+        $(".en__submit button").attr("disabled", "disabled");
+        
+        var token = 'INSERT TOKEN HERE'; // token settings (from dashboard)
+        var campaignId = 'INSERT CAMPAIGN ID HERE'; // campaign ID setting (from lookup campaign, 'view source' footer)
+        var postcode = $('input[name$="postcode"]').val(); // always grabs the tagged 'postcode' field value; change if using a generic input field
+        console.log("authorityLookup: " + postcode)
+        var postcodeRegex = /^([a-zA-Z]){1}([0-9][0-9]|[0-9]|[a-zA-Z][0-9][a-zA-Z]|[a-zA-Z][0-9][0-9]|[a-zA-Z][0-9]){1}([ ]?)([0-9][a-zA-z][a-zA-z]){1}$/; // might need tweaking, but should allow codes with/without space separators
+    
+        if (postcodeRegex.test(postcode) == false) {
+               // $('input[name$=NOT_TAGGED_3]').val(':('); // the code was invalid
+                // add some code to indicate error here?
+        } else {
+            // perform ajax call
+            flagReady = false;
+           postcode = postcode.replace(/\s/g, ""); // clear all spaces from string, to make it 'proper' for the call ...
+    
+           $.ajax({
+                url:"https://e-activist.com/ea-dataservice/data.service?service=EaEmailAOTargetContact&token="+token+"&campaignId="+campaignId+"&postcode="+postcode+"&contentType=json",
+        		crossDomain:true,
+        	    dataType:"jsonp"
+        	}).done(function(dataResponse) {            
+              	for (i = 0; i < dataResponse["rows"].length; i++) {
+                  title = dataResponse["rows"][i]["columns"][1].value; // title
+                  firstname = dataResponse["rows"][i]["columns"][2].value; // firstname
+                  lastname = dataResponse["rows"][i]["columns"][3].value; // lastname
+                  organisation = dataResponse["rows"][i]["columns"][5].value; // organisation
+                  console.log(title+' '+firstname+' '+lastname+', '+organisation);
+                  $('input[name$=NOT_TAGGED_3]').val(title+' '+firstname+' '+lastname+', '+organisation); // insert organization into the field
+                  $(".en__submit button").removeAttr("disabled");
+                }    
+            })
+    			
+            .fail(function() {
+            	// note on error
+            })
+    				
+            .always(function() {
+                // note on ajax call completed
+            });    
+        }
+    }
+
+
+});
+</script>
