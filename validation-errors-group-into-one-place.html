@@ -1,0 +1,14 @@
+<div class="errorBlock"></div>
+<script>
+    // Instead of validation errors appearing above inputs,    
+    // this will group them all in the above errorBlock div
+    $(".en__errorList, .en__errorHeader").appendTo(".errorBlock");
+    $("body").on("DOMNodeInserted", ".en__field__error", function () {
+        if ( !$(this).parent().hasClass("errorBlock") ) {  
+            $(this).appendTo(".errorBlock");
+        }
+    });
+     $("form.en__component--page").submit(function(e){
+        $(".errorBlock").empty();
+    });
+</script>
