@@ -58,17 +58,15 @@ Finally, to make this work, add a text block, then click the Source button and a
 
 ```html
 <div class="moreinfo">
-<div class="moreinfo-heading">More information</div>
-
-<div class="moreinfo-content">
-<p>More info more info</p>
-
-<p>More info more info</p>
-
-<p>More info more info</p>
-
-<p>More info more info</p>
-</div>
+      <div class="moreinfo-heading">
+            Click for more information
+      </div>
+      <div class="moreinfo-content">
+            <p>More info more info</p>
+            <p>More info more info</p>
+            <p>More info more info</p>
+            <p>More info more info</p>
+      </div>
 </div>
 ```
 
