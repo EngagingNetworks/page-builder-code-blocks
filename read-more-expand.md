@@ -1,3 +1,5 @@
+# Adding a read more expanding text block
+
 If you want some text that is hidden until a link is clicked, then you can do it by following these instructions
 
 First of all your template will need some javascript to add the functionality. Paste this into the bottom of your footer, just before the <html> tag:
@@ -50,7 +52,8 @@ Then insert the styles below into your <head> also:
             transform-origin: 20% 40%;
     	}
 </style>
-  
+```
+
 Finally, to make this work, add a text block, then click the Source button and add this HTML:
 
 ```html
