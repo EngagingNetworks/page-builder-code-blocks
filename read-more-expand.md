@@ -5,19 +5,21 @@ If you want some text that is hidden until a link is clicked, then you can do it
 First of all your template will need some javascript to add the functionality. Paste this into the bottom of your footer, just before the `<html>` tag:
 
 ```html
-      <!-- More info box -->
-    <script type="text/javascript">
-    	$(function() {
+<!-- More info box -->
+<script type="text/javascript">
+      $(function() {
             $(".moreinfo-content").hide();
             $(".moreinfo").click(function() {
-                $(".moreinfo-content",this).toggle("fast");
-    	        $(".moreinfo-heading",this).toggleClass("moreinfo-active"); 
-    	    });      
-    	});
-    </script>
+                  $(".moreinfo-content",this).toggle("fast");
+                  $(".moreinfo-heading",this).toggleClass("moreinfo-active"); 
+            });      
+      });
+</script>
 ```
 
-If you want to, you can add styling so that an arrow appear before the link which twists downwards when it is clicked to expand open. The example below requires the Font Awesome fonts to be installed, which is a handy font because it contains lots of nice symbols. You can do that by visiting https://fontawesome.com/get-started and copying the code it gives you and putting it in your template's header, somewhere inside the `<head>` tags. 
+Note you need jquery for this to work, so add the library if you don't already have it (see https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/README.md).
+
+If you want to, you can add styling to the header that is clicked, so that an arrow appears before the link which twists downwards when it is clicked to expand open. The example styles below requires the Font Awesome font to be installed, which is a handy font because it contains lots of nice symbols. You can do that by visiting https://fontawesome.com/get-started and copying the code it gives you and putting it in your template's header, somewhere inside the `<head>` tags. 
 
 Then insert the styles below into your `<head>` also:
 
@@ -53,7 +55,7 @@ Then insert the styles below into your `<head>` also:
 </style>
 ```
 
-Finally, to make this work, add a text block, then click the Source button and add this HTML:
+Finally, to actually add the text to your page, drag in a new text block, then click the Source button and paste in this HTML:
 
 ```html
 <div class="moreinfo">
@@ -69,4 +71,4 @@ Finally, to make this work, add a text block, then click the Source button and a
 </div>
 ```
 
-Any HTML that appears between the moreinfo-content div will be hidden until the moreinfo-heading is clicked.
+Any content that appears between the moreinfo-content div will be hidden until the moreinfo-heading is clicked.
