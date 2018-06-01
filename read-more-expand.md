@@ -23,7 +23,6 @@ Then insert the styles below into your `<head>` also:
 
 ```html
 <style>
-        /* MORE INFO */
         /* More info box */
     	.moreinfo {
     	  cursor: pointer;
