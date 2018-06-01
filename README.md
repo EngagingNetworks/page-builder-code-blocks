@@ -70,5 +70,8 @@ https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/whatsap
 
 ## Other
 
+Add a more info link that expands to reveal more content
+https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/read-more-expand.md
+
 Alert supporters if their browser does not support TLS 1.1 or above (see http://support.engagingnetworks.net/manually-enabling-tls-11-andor-tls-12-protocols-web-browsers for more information)
 https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/tls-checker.html
