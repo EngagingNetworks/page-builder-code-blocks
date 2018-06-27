@@ -41,6 +41,9 @@ https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/change-
 Counters for characters remaining in textareas
 https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/textarea-characters-remaining.html
 
+Update a field with another's contents
+https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/update-field-with-another-field's-value.html
+
 ## Opt-in code
 
 Show and hide an alert if the supporter chooses No for a radio opt-in
