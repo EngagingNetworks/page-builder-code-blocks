@@ -1,0 +1,11 @@
+<!-- This code will save the locale into a question or form field called "Locale". The field should *not* be mandatory,
+and should be a text box (not hidden - the code will hide it instead). You will need jquery on your page.
+This should be added as a code block on the page where your locale field is placed -->
+
+<script>
+    $( document ).ready(function() {
+        // Save the locale parameter to a question
+        $(".en__field--locale").hide();
+        $(".en__field--locale input").val(pageJson.locale);
+    });
+</script>
