@@ -66,6 +66,9 @@ https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/direct-
 This code chooses the next available start date as the 20th of next month
 https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/direct-debits-next-month-20th.html
 
+Gift aid calculation display
+https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/gift-aid-calculation.md
+
 ## Social code
 
 Change the share icons' simple images to your own images
