@@ -13,7 +13,7 @@ $('input[name="transaction.donationAmt"], input[name="transaction.donationAmt.ot
 </script>
 ```
 
-And then inside the text block where you want to show the calculated amount, add this:
+And then inside the text block (with class "gift-aid") where you want to show the calculated amount, add this:
 
 ```html
 <h2>Gift aid</h2>
