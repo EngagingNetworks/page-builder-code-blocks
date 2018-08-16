@@ -21,3 +21,5 @@ And then inside the text block (with class "gift-aid") where you want to show th
 you give to us would be worth <strong class="gift-aid-val">&pound;1.25</strong> 
 at no extra cost to you.</p>
 ```
+
+The code will replace the values inside the text block with values based on the input donation amount. Bingo!
