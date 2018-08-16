@@ -60,6 +60,10 @@ https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/convert
 
 ## Donation pages code
 
+
+This code chooses the next two available start dates on the 1st of the month
+https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/direct-debits-next-two-possible-dates-v2.html
+
 This code chooses the next two available start dates on the 1st or 15th of the month
 https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/direct-debits-next-two-possible-dates.html
 
