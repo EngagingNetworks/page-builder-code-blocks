@@ -1,3 +1,5 @@
+# Verify account number and sort code
+
 You cannot insert some field values into thanks emails or on thanks pages. For example, tagged account number and sort code.
 Therefore if you want to verify these to the supporter, you need to create new untagged fields in your Account Data Structure
 and add them to the form block as Hidden fields. You can then use a Code Block to update these fields with the data that
