@@ -5,6 +5,8 @@ Therefore if you want to verify these to the supporter, you need to create new u
 and add them to the form block as Hidden fields. You can then use a Code Block to update these fields with the data that
 the supporter enters.
 
+**Note:** how you verify supporter's financial information with them is up to you and depends on many factors - we do not offer advice on what you should do, just the technical aspect of it. The code below is simply an example. 
+
 In this example, the code block will update the untagged fields NOT_TAGGED_13 and NOT_TAGGED_14 with the tagged fields.
 Your own IDs may vary.
 
