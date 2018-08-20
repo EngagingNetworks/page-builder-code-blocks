@@ -25,3 +25,5 @@ In addition, the code masks out the first 4 digits of the account number.
     })
 </script>
 ```
+
+Now you can simply use the field insert tool to display this information to the supporter.
