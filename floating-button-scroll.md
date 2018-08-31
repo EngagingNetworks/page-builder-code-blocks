@@ -1,3 +1,4 @@
+** Floating button for mobiles to scroll to form **
 ```html
 <div id="mobileScrollerFooter">
     <a class="button" id="mobileScroller">Sign the letter</a>
@@ -30,7 +31,7 @@
         // The floating button
         var $floatingButton = $(".en__component--codeblock div#mobileScrollerFooter");
         // Where the floating button should slide to
-        var $slideTo = $(".en_right_wrapper");
+        var $slideTo = $(".en__component--column--2");
         var $slideToPosition = $slideTo.position();
         // Check window width
         if ( $( document ).width() > 600 ) {
