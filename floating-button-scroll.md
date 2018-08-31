@@ -11,16 +11,13 @@ The button will scroll to the variable specified in $slideTo
 Example page: https://e-activist.com/page/29146/petition/1?mode=DEMO&locale=en-GB
 
 ```html
-<div id="mobileScrollerFooter">
-    <a class="button" id="mobileScroller">Sign the letter</a>
-</div>
 <style>
     @media only screen and (min-width: 600px) {
-        .pb div#mobileScrollerFooter {
+        div#mobileScrollerFooter {
             display: none;
         }
     }
-    .en__component--codeblock div#mobileScrollerFooter {
+    div#mobileScrollerFooter {
         position: fixed;
         bottom: 0;
         background-color: #fff;
@@ -31,14 +28,18 @@ Example page: https://e-activist.com/page/29146/petition/1?mode=DEMO&locale=en-G
         text-align: center;
         box-sizing: border-box;
     }
-    .en__component--codeblock a#mobileScroller {
+    a#mobileScroller {
         cursor: pointer;
+        display: block;
     }
 </style>
 <script>
     $( document ).ready(function() {
-        // The floating button
-        var $floatingButton = $(".en__component--codeblock div#mobileScrollerFooter");
+        // Insert the button into the HTML
+        var buttonText = "Sign the letter";
+        var buttonHTML = "<div id='mobileScrollerFooter'><a class='button' id='mobileScroller'>" + buttonText + "</a></div>"
+        $( buttonHTML ).insertAfter( ".en__component--page" );
+        var $floatingButton = $("div#mobileScrollerFooter");
         // Where the floating button should slide to
         var $slideTo = $(".en__component--column--2");
         var $slideToPosition = $slideTo.position();
