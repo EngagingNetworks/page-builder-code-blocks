@@ -6,7 +6,7 @@ This is useful if you are worried that the left column (which will sit above the
 
 This code should all be within one code block. Note that you will need to have styled .button
 
-The button will scroll to the variable specified in $slideTo
+The button will scroll to the selector specified in $slideTo
 
 Example page: https://e-activist.com/page/29146/petition/1?mode=DEMO&locale=en-GB
 
