@@ -23,8 +23,6 @@ The button will scroll to the variable specified in $slideTo
         bottom: 0;
         background-color: #fff;
         width: 100%;
-        margin-left: -5%;
-        margin-right: -5%;
         padding: 1rem;
         border-top: 1px solid #555;
         z-index: 1000;
