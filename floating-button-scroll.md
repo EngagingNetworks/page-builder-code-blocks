@@ -1,6 +1,12 @@
 # Floating button for mobiles to scroll to form
 This code will add a button fixed to the bottom of the page for screens less than 600 pixels wide that, when clicked,
-will scroll to specified content, such as the second column
+will scroll to specified content, such as the second column.
+
+This is useful if you are worried that the left column (which will sit above the right column in narrow screens is obscuring the fields that the supporter needs to complete. 
+
+This code should all be within one code block. Note that you will need to have styled .button
+
+The button will scroll to the variable specified in $slideTo
 
 ```html
 <div id="mobileScrollerFooter">
