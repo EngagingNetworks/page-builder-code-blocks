@@ -1,4 +1,7 @@
-** Floating button for mobiles to scroll to form **
+# Floating button for mobiles to scroll to form
+This code will add a button fixed to the bottom of the page for screens less than 600 pixels wide that, when clicked,
+will scroll to specified content, such as the second column
+
 ```html
 <div id="mobileScrollerFooter">
     <a class="button" id="mobileScroller">Sign the letter</a>
