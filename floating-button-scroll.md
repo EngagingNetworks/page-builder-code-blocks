@@ -8,6 +8,8 @@ This code should all be within one code block. Note that you will need to have s
 
 The button will scroll to the variable specified in $slideTo
 
+Example page: https://e-activist.com/page/29146/petition/1?mode=DEMO&locale=en-GB
+
 ```html
 <div id="mobileScrollerFooter">
     <a class="button" id="mobileScroller">Sign the letter</a>
