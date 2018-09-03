@@ -83,6 +83,9 @@ https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/social-
 Add a Whatsapp sharing button for mobiles
 https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/whatsapp.html
 
+Add a share by email button
+https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/share-by-email-button.md
+
 ## Other
 
 Add a more info link that expands to reveal more content
