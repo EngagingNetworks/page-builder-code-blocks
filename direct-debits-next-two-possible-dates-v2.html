@@ -9,8 +9,7 @@
 	var monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
 	// Get the earliest start date to compare against
 	var daysAhead = 15; // the number of days from today we can start a new DD from
-    var earliestDate = new Date();
-	console.log (earliestDate); 
+    	var earliestDate = new Date();
 	earliestDate.setDate(earliestDate.getDate() + daysAhead);
 	// Possible parts of earliest date
 	var day = earliestDate.getDate();
