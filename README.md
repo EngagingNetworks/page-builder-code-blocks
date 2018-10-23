@@ -47,6 +47,9 @@ https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/update-
 Locale - save to a question/field when you submit the page
 https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/locale-save.html
 
+Target block messages to have a maximum number of allowed characters
+https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/max-number-of-characters-in-target-block.html
+
 ## Opt-in code
 
 Show and hide an alert if the supporter chooses No for a radio opt-in
