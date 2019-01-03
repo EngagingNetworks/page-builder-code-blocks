@@ -1,9 +1,12 @@
 <script>
-	// Adds placeholders to text boxes automatically
+	// Adds placeholders to text boxes automatically from their labels
 	$('.en__field--text').each(function() {
+		// Get input and label text
 		var input = $(this).find('input');
 		var label = $(this).find('label');
 		var labelText = label.text();
+		// Hide label so only placeholders are used
+		label.hide();
 		// Add * to placeholder if mandatory
 		if ( input.parent().parent().hasClass("en__mandatory") ) {
 			labelText += "*";
