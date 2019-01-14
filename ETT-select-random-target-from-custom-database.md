@@ -1,4 +1,4 @@
-# Selecting a random target for a custom database ETT
+# Select a random target for a custom database ETT
 
 Usually when using a custom database that requires a Match field, you match the target
 on a field determined by the supporter, e.g. their broadband company
