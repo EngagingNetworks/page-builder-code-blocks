@@ -26,7 +26,7 @@ This is especially useful for the UK's House of Lords database, since these aren
         /* Exclude values if you wish. Copy the line below and change the number */
         //exclude.push(35);
         
-        /* create array of 73 index and 73 value. don't create if number matches forbidden numbers */
+        /* create array. don't create if number matches forbidden numbers */
         while(i <= num){
         	if($.inArray(i,exclude) == -1){
         		lords.push(i);
