@@ -1,0 +1,29 @@
+<script>
+    // Show the gift-aided amount in the tax deductible's checkbox label
+    var donationAmount = 0;
+    var giftAidedAmount = 0;
+    var giftAidIntro = " <span>Make your donation worth £";
+    showGiftAid();
+    $(".en__field--donationAmt").click( function() {
+        showGiftAid();
+    });
+    $(".en__field--donationAmt .en__field__input--other").change( function() {
+        showGiftAid();
+    });
+    function showGiftAid() {
+        $(".en__field--taxdeductible .en__field__label--item span").remove();
+        // get donationAmount
+        donationAmount = $(".en__field--donationAmt input:checked").val();
+        if (donationAmount == "Other") {
+            donationAmount = $(".en__field--donationAmt .en__field__input--other").val();
+        }
+        // append
+        if ($.isNumeric(donationAmount) && donationAmount > 0 ) {
+            giftAidedAmount = donationAmount * 1.25;
+            giftAidedAmount = giftAidedAmount.toFixed(2);
+            $(".en__field--taxdeductible .en__field__label--item").append(giftAidIntro + giftAidedAmount + "</span>");
+        } else {
+            
+        }
+    }
+</script>
