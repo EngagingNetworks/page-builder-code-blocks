@@ -10,7 +10,7 @@ Here's an example using a postcode field on the first page of an action. When th
 
 3) Add a Code Block to the page
 
-4) Include code like this in the MP name copy block (NOTE: Replace xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx with your public token):
+4) Include code like this in the MP name copy block (NOTE: Replace 'your-token' with your public token):
 
 ``` html
 <span id="userPostcode" style="display:none;">{user_data~Postcode}</span>
