@@ -20,7 +20,9 @@ Here's an example using a postcode field on the first page of an action. When th
 
 var userPostcode = encodeURIComponent($.trim($('#userPostcode').text()));
 
-var dataUrl = 'https://e-activist.com/ea-dataservice/data.service?service=EaAOContactData&constituencyDatabaseId=3&postcode=' + userPostcode + '&token=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&contentType=json';
+var token = "your-token";
+  
+var dataUrl = 'https://e-activist.com/ea-dataservice/data.service?service=EaAOContactData&constituencyDatabaseId=3&postcode=' + userPostcode + '&token=' + token + '&contentType=json';
 
 var newDataRequest = $.ajax({
   url: dataUrl,
