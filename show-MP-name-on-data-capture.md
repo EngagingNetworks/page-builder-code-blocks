@@ -15,29 +15,28 @@ Here's an example using a postcode field on the first page of an action. When th
 <p>Your MP is <span id="mpName"></span></p>
 
 <script>
-
-var userPostcode = encodeURIComponent($.trim($('#userPostcode').text()));
-
-var token = "your-token";
-  
-var dataUrl = 'https://e-activist.com/ea-dataservice/data.service?service=EaAOContactData&constituencyDatabaseId=3&postcode=' + userPostcode + '&token=' + token + '&contentType=json';
-
-var newDataRequest = $.ajax({
-  url: dataUrl,
-  dataType: "jsonp",
-  crossDomain: true,
-  timeout: 30000
-});
-
-newDataRequest.done(function(data) {
-  var mpName = data.rows[0].columns[1].value + ' ' + data.rows[0].columns[2].value + ' ' + data.rows[0].columns[3].value + ' ' + data.rows[0].columns[4].value;
-  $('#mpName').text(mpName);
-});
-
-newDataRequest.fail(function(jqXHR, textStatus) {
-  console.log('ajax error' + jqXHR.responseText);
-});
-
+  var userPostcode = encodeURIComponent($.trim($('#userPostcode').text()));
+  var service = "EaAOContactData";
+  var constituencyDatabaseId = 3;
+  var token = "your-token";
+  var dataUrl = "https://e-activist.com/ea-dataservice/data.service?service=" + service + 
+    "&constituencyDatabaseId=" + constituencyDatabaseId +
+    "&postcode=" + userPostcode +
+    "&token=" + token + 
+    "&contentType=json";
+  var newDataRequest = $.ajax({
+    url: dataUrl,
+    dataType: "jsonp",
+    crossDomain: true,
+    timeout: 30000
+  });
+  newDataRequest.done(function(data) {
+    var mpName = data.rows[0].columns[1].value + ' ' + data.rows[0].columns[2].value + ' ' + data.rows[0].columns[3].value + ' ' + data.rows[0].columns[4].value;
+    $('#mpName').text(mpName);
+  });
+  newDataRequest.fail(function(jqXHR, textStatus) {
+    console.log('ajax error' + jqXHR.responseText);
+  });
 </script>
 ```
 
