@@ -17,7 +17,7 @@ Here's an example using a postcode field on the first page of an action. When th
 <script>
   var userPostcode = encodeURIComponent($.trim($('#userPostcode').text()));
   var service = "EaAOContactData";
-  var constituencyDatabaseId = 3;
+  var constituencyDatabaseId = 3; // Westminster MP database
   var token = "your-token";
   var dataUrl = "https://e-activist.com/ea-dataservice/data.service?service=" + service + 
     "&constituencyDatabaseId=" + constituencyDatabaseId +
