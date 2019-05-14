@@ -4,13 +4,11 @@ You can use data calls to query our contact databases for information and displa
 
 Here's an example using a postcode field on the first page of an action. When the supporter types this in and submits the page, the second page uses the postcode to request information from our MP contact database and then displays the supporter's MP in a copy block.
 
-1) Create the first page of the data capture action, including the postcode field and anything else you want.
+1) Create the first page of the data capture action, including the postcode field, email address and anything else you want.
 
-2) On the second page, add a copy block that will contain text including the MP name.
+2) On the second page, add a code block
 
-3) Add a Code Block to the page
-
-4) Include code like this in the MP name copy block (NOTE: Replace 'your-token' with your public token):
+3) In the Code Block, put in the following, updating 'your-token' with your public token
 
 ``` html
 <span id="userPostcode" style="display:none;">{user_data~Postcode}</span>
