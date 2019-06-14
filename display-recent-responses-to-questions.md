@@ -2,7 +2,7 @@ You can use our public API call to retrieve, and display, responses to a questio
 
 To do this, you need to add a Code Block, with code similar to the below. Note that you'll need to get your own Public Token for the token variable, and to place in your own questionId. The questionId can be retrieved by following the instructions at the bottom of https://engagingnetworks.support/knowledge-base/public-data-services-using-a-token
 
-```
+```html
 <div id="responses"></div>
 <script>
     var questionId = 23668;
