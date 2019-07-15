@@ -14,11 +14,11 @@
 	nextDate.setDate(nextDate.getDate() + daysAhead);
 	// Step through the days to see if valid
 	do {
-	  if (nextDate.getDate() == possDay1 || nextDate.getDate() == possDay2) {
-      options.push(nextDate);
-	}  
-    nextDate = new Date(nextDate);
-    nextDate.setDate(nextDate.getDate() + 1);
+		if (nextDate.getDate() == possDay1 || nextDate.getDate() == possDay2) {
+			options.push(nextDate);
+		}  
+		nextDate = new Date(nextDate);
+    		nextDate.setDate(nextDate.getDate() + 1);
 	}
 	while (options.length < numberOfOptions);
 	// Populate the dropdown
