@@ -58,9 +58,6 @@ https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/opt-in-
 Pre-tick and hide a checkbox or radio opt-in
 https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/pre-tick-and-hide-opt-in.html
 
-Change a checkbox opt-in to a radio on that page only. Good for testing
-https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/convert-opt-in-checkbox-to-radio.md
-
 ## Donation pages code
 
 Choose the next two available start dates on the 1st of the month
