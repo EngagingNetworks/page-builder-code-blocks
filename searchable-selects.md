@@ -2,11 +2,12 @@ If you have a lot of values in a select field, you might want it to be fully sea
 
 There is a third-party JavaScript plug-in called [Selectize](https://github.com/selectize/selectize.js) that works well.
 
+## Example
 For example, this allows you to search for specific UK towns:
 
 https://e-activist.com/page/47877/petition/1?mode=DEMO&locale=en-GB
 
-This uses a code block to call CDN files:
+In that example, it uses a code block to call CDN files:
 
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -19,4 +20,4 @@ $(function() {
 </script>
 ```
 
-There are many other options available, so check out Selectize's documenation
+There are many other options available, so check out Selectize's documentation.
