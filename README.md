@@ -50,6 +50,9 @@ https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/locale-
 Target block messages to have a maximum number of allowed characters
 https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/max-number-of-characters-in-target-block.html
 
+Searchable select field
+https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/searchable-selects.md
+
 ## Opt-in code
 
 Show and hide an alert if the supporter chooses No for a radio opt-in
