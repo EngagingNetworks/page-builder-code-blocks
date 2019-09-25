@@ -30,7 +30,7 @@ Create and place a random email address - useful for anonymous actions
 https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/anonymous-random-email-address.html
 
 Disable the submit button until the supporter presses a key inside the email-to-target message (to force them to edit it)
-https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/disable-submit-until-message-keypress.html
+https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/disable-submit-until-target-message-keypress.html
 
 Field masks, e.g. for phone numbers or credit card numbers
 https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/field-masks.html
