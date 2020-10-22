@@ -80,12 +80,6 @@ https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/account
 
 ## Social code
 
-Change the share icons' simple images to your own images
-https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/social-icons-simple-image-change.html
-
-Add a Whatsapp sharing button for mobiles
-https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/whatsapp.html
-
 Add a share by email button
 https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/share-by-email-button.md
 
