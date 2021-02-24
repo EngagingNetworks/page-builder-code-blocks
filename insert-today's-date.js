@@ -5,8 +5,10 @@ $( document ).ready(function() {
   // ... inserts the date a year from now, minus one, into #en__field_supporter_NOT_TAGGED_7
   // It will format them as YYYYMMDD which means you can use profile and query filters (e.g. Is After)
   // Note 1: the IDs of the fields you want to insert the dates into will be different for your own account!
-  // Note 2: the fields would need to be on the page, and hidden by CSS (NOT as a Hidden type otherwise val cannot be set)
-  // Note 3: You don't need all three fields of course - if you just want today's date, only insert for the start date
+  // Note 2: the fields would need to be on the page, and hidden by CSS (NOT as a Hidden type otherwise val cannot be set
+  // Note 3: Hide the fields using CSS in a code block so you can still see them in page-builder
+  // Note 4: You don't need all three fields of course - if you just want today's date, only insert for the start date
+  // Note 5: You need jQuery for this to work. You can put this in a Code Block on the same page as the fields to insert into
   
   var daytoday = new Date();
   var dayinyear = new Date();
