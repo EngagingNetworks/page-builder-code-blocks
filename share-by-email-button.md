@@ -18,7 +18,7 @@ $( document ).ready(function() {
     emailBody = encodeURIComponent(emailBody);
     // Make up the HTML of the button
     var emailHREF = "mailto:?subject=" + emailSubject + "&body=" + emailBody;
-    var emailHTML = "<a class='en__socialShare en__socialShare--twitter' style='width: 60px; height: 60px; padding: 12px; margin: 0px;' href='" + emailHREF + "' target='_blank'><img src='" + emailIcon + "' alt='Share by email'></a>"; 
+    var emailHTML = "<a class='en__socialShare en__socialShare--email' style='width: 60px; height: 60px; padding: 12px; margin: 0px;' href='" + emailHREF + "' target='_blank'><img src='" + emailIcon + "' alt='Share by email'></a>"; 
     // Insert the button
     $( ".en__socialShares" ).append( emailHTML );
 });
