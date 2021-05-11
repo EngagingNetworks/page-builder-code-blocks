@@ -1,6 +1,6 @@
 # Add a share by email button to the simple social buttons
 
-The social share channels available are Facebook, Twitter and Google+. But what if you wanted to add another option to share by email here?
+The social share channels available are Facebook, Twitter, LinkedIn and WhatsApp. But what if you wanted to add another option to share by email here?
 
 If you add this code to the bottom of the page, below the social buttons then it'll do this for you. Adjust the settings for the email variables for your own content:
 
