@@ -1,6 +1,9 @@
-Reference data can be inserted inside a target block message, in the contact details area of a target block, or in the background information tab of the block.
+Reference data and target data (such as Party) can be inserted inside a target block message, in the contact details area of a target block, or in the background information tab of the block.
+
 If you wish for reference data to show up in a text block then you can insert this into the background information area of the tqarget block first, then use the following code to display it in a text block as well (hiding the background information tab too).
+
 This code works for a three-page email-to-target campaign set-up, where the target block is on Page 2.
+
 1) Add any html, target data inserts and reference data inserts you want to display inside the targetblock's background information area (via the target block's settings) first. 
 For example:
 ```html
