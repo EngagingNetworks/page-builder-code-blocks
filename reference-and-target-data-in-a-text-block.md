@@ -17,3 +17,4 @@ For example:
     }
 </style> 
 ```
+3) Add a class of "referencemessage" to the text block that should display the html (it will replace everything inside the text block so you can add default text here should the code not work for some reason)
