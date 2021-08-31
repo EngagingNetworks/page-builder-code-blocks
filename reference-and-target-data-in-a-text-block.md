@@ -6,7 +6,7 @@ For example:
 ```html
 <h2>In {contact_data~organization}, there are {reference_data~123~column1} cases of graffiti every year.</h2> 
 ```
-2) Add a Code Block at the bottom of the page with the following code (this assume you have jQuery on your page):
+2) Add a Code Block at the bottom of the page with the following code (this assumes you have jQuery on your page):
 ```html
 <script>
     $(".en__component--copyblock.referencemessage").html($(".en__contactBackground__text pre").text().trim());
