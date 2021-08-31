@@ -3,8 +3,11 @@ If you wish for reference data to show up in a text block then you can insert th
 This code works for a three-page email-to-target campaign set-up, where the target block is on Page 2.
 1) Add any html, target data inserts and reference data inserts you want to display inside the targetblock's background information area (via the target block's settings) first. 
 For example:
+```html
 <h2>In {contact_data~organization}, there are {reference_data~539~column1} cases of graffiti every year.</h2> 
+```
 2) Add a Code Block at the bottom of the page with the following code (this assume you have jQuery on your page):
+```html
 <script>
     $(".en__component--copyblock.referencemessage").html($(".en__contactBackground__text pre").text().trim());
 </script> 
@@ -13,3 +16,4 @@ For example:
         display: none !important;
     }
 </style> 
+```
