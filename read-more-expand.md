@@ -2,7 +2,7 @@
 
 If you want some text that is hidden until a link is clicked, then you can do it by following these instructions
 
-First of all your template will need some javascript to add the functionality. Paste this into the bottom of your footer, just before the `<html>` tag:
+First of all your template will need some javascript to add the functionality. Paste this into the bottom of your footer, just before the `</html>` tag:
 
 ```html
 <!-- More info box -->
