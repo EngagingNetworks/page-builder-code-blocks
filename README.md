@@ -7,7 +7,7 @@ Code Blocks can contain styles and javascript that only run when you preview or 
 Many of these code blocks assume you have the jQuery library loaded in your template. If you do not, then you can add it via a line in your template's `<head>`, e.g.:
   
 ```html
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1/jQuery-v3.6.0.js?v=1645177557000"></script>
 ```
 ## Where to put the code block
 The code block's position is important - if it is responding to a part of the page but it loads before it, it may not work. It is good to position the block at the bottom of your pages. Sometimes, you may want to wrap the code up in a ready event - this is so that it will only fire once the page has fully loaded:
