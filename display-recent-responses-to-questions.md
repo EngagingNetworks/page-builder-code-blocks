@@ -6,7 +6,7 @@ To do this, you need to add a Code Block, with code similar to the below. Note t
 <div id="responses"></div>
 <script>
     var questionId = 23668;
-    var token = "a85d22f6-6fac-4fcf-8d25-2c348bd2e0b5";
+    var token = "YOUR_PUBLIC_TOKEN";
     var dataURL = "https://e-activist.com/ea-dataservice/data.service?service=EaSupporterQuestionResponse&token=" + 
         token + "&questionId=" + questionId + "&contentType=json";
     // make the data call
