@@ -9,6 +9,7 @@
   var milliseconds = theDate.getTime();
   var emailAddress = makeid() + milliseconds + "@noaddress.ea";
   $("#en__field_supporter_emailAddress").val(emailAddress);
+  $("#en__field_supporter_emailAddress").css("display","none");
   function makeid() {
     var text = "";
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
