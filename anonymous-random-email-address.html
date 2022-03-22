@@ -5,17 +5,19 @@
   // Or you can use this code if you want separate records for each one - this code creates a random unique email address and
   // puts it into the email address field
   // Example: see https://actnow.e-activist.com/page/15136/petition/1?mode=DEMO
-  var theDate = new Date();
-  var milliseconds = theDate.getTime();
-  var emailAddress = makeid() + milliseconds + "@noaddress.ea";
-  $("#en__field_supporter_emailAddress").val(emailAddress);
-  $("#en__field_supporter_emailAddress").css("display","none");
-  function makeid() {
-    var text = "";
-    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    for (var i = 0; i < 5; i++) {
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
+  $( document ).ready(function() {
+    var theDate = new Date();
+    var milliseconds = theDate.getTime();
+    var emailAddress = makeid() + milliseconds + "@noaddress.ea";
+    $("#en__field_supporter_emailAddress").val(emailAddress);
+    $(".en__field__label").css("display","none");
+    function makeid() {
+      var text = "";
+      var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+      for (var i = 0; i < 5; i++) {
+          text += possible.charAt(Math.floor(Math.random() * possible.length));
+      }
+      return text;
     }
-    return text;
-  }
+  });
 </script>
