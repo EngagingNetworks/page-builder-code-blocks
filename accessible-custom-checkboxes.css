@@ -1,0 +1,55 @@
+/* Styling checkboxes can often make them inaccessible with either the keyboard, screenreaders, or even both.
+ This CSS allows you to replace the default browser checkboxes with fully accessible replacements.
+ There are comments which indicate which parts to change to customise for your brand. */
+
+input[type='checkbox'] {
+  position: absolute;
+}
+
+input[type='checkbox'] + label {
+  display: block;
+  position: relative;
+  padding: 0 1.5rem;
+}
+
+input[type='checkbox'] + label::before {
+  content: '';
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  width: 25px;  /* Modify this to change the size of the checkbox. */
+  height: 25px; /* Modify this to change the size of the checkbox. */
+  background: #ffffff; /* Modify this to change the background colour of the checkbox. */
+  border: 1px solid #000000; /* Modify this to change colour of the border of the checkbox and the thickness of the border. */
+  vertical-align: text-bottom;
+}
+
+input[type='checkbox']:checked + label::before {
+  background: #ffffff; /* Modify this to change the colour of background of the checkbox when it is checked.
+}
+
+input[type='checkbox']:checked + label::after {
+  content: '';
+  position: absolute;
+  top: 7px; /* Modify this to adjust the position of the tick inside the checkbox. */
+  left: 22px; /* Modify this to adjust the position of the tick inside the checkbox. */
+  border-left: 2px solid #000000; /* Modify this to change the colour of the tick inside the checkbox. */
+  border-bottom: 2px solid #000000; /* Modify this to change the colour of the tick inside the checkbox. */
+  height: 6px; /* Modify this to change the size of the tick inside the checkbox. */
+  width: 13px; /* Modify this to change the size of the tick inside the checkbox. */
+  transform: rotate(-45deg);
+}
+
+input[type='checkbox']:focus + label::before {
+  outline: #000000 solid 1px; /* Modify this to change the focus colour for the checkbox. */
+  box-shadow: 0 0px 8px ;
+}
+
+input[type='checkbox'] {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
