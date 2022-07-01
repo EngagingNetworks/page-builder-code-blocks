@@ -25,7 +25,7 @@ input[type='checkbox'] + label::before {
 }
 
 input[type='checkbox']:checked + label::before {
-  background: #ffffff; /* Modify this to change the colour of background of the checkbox when it is checked.
+  background: #ffffff; /* Modify this to change the colour of background of the checkbox when it is checked. */
 }
 
 input[type='checkbox']:checked + label::after {
