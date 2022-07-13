@@ -1,0 +1,11 @@
+$(function() {
+    $("input[name='transaction.donationAmt.other']").bind({
+        keydown: function(e) {
+            // prevent £, $ and space from being typed
+            if (e.keyCode==51||e.keyCode==52||e.keyCode==32) {
+               return false;
+            }
+            return true;
+        }
+    });
+});
