@@ -8,7 +8,6 @@ To do that, you need code like this:
 // show the shopping list depending on the donation value and whether it is recurring or not:
 const showPrompt = (radioValue, radioRecurring) => {
     $('.en__component--copyblock.prompts ul').find('li').each(function () {
-        console.log("showPrompt " + $(this).data("amount"))
         if ( ($(this).data("amount") == radioValue) && ($(this).data("rec") == radioRecurring) ){
             $(this).css("display","list-item");
         } else {
