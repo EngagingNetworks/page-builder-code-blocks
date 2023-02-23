@@ -42,3 +42,11 @@ And to style the search text (highlight) and the active one you hover on (active
     background-color: #ccc;
 }
 ```
+
+And to style the placeholder text:
+
+```css
+.selectize-control input::placeholder {
+    color: black;
+}
+```
