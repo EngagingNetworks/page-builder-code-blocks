@@ -18,6 +18,9 @@ $( document ).ready(function() {
 });
 ```
 
+## Do I have to use a Code Block?
+No! The Code Block is useful when you only want to run the code on one page of a campaign, but you could add it directly into the template so all campaigns and their pages using that template get the code.
+
 ## Fields code
 
 Add placeholders within text boxes that match the input's label
