@@ -5,7 +5,7 @@ There is a third-party JavaScript plug-in called [Selectize](https://github.com/
 ## Example
 For example, this allows you to search for specific UK towns:
 
-https://e-activist.com/page/47877/petition/1?mode=DEMO&locale=en-GB
+https://secure.engagingnetworks.net/page/47877/petition/1?mode=DEMO&locale=en-GB
 
 In that example, it uses a code block to call CDN files:
 
