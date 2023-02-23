@@ -7,7 +7,7 @@ For example, this allows you to search for specific UK towns:
 
 https://secure.engagingnetworks.net/page/47877/petition/1?mode=DEMO&locale=en-GB
 
-In that example, it uses a code block to call CDN files:
+In that example, it uses a code block to call CDN files (this applies to all Selects - you can change this to be more specific via the .selectize() line in this code):
 
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -22,7 +22,21 @@ $(function() {
 
 There are many other options available, so check out Selectize's documentation.
 
-For example, to make it full width:
+##Styling
+
+Some example stylings for the selectize box:
+
+```css
+.selectize-input input {
+  border-radius: .5em;
+  color: #264334;
+  min-height: 3em;
+  padding: .55em !important;
+  border-color: #000;
+}
+```
+
+To make it full width:
 
 ```css
 .selectize-control {
@@ -50,3 +64,4 @@ And to style the placeholder text:
     color: black;
 }
 ```
+
