@@ -21,3 +21,24 @@ $(function() {
 ```
 
 There are many other options available, so check out Selectize's documentation.
+
+For example, to make it full width:
+
+```css
+.selectize-control {
+  width: 100%;
+  padding: 0;
+}
+```
+
+And to style the search text (highlight) and the active one you hover on (active):
+
+```css
+.selectize-control .highlight {
+    color: white;
+    background-color: #333333 !important;
+}
+.selectize-control .active {
+    background-color: #ccc;
+}
+```
