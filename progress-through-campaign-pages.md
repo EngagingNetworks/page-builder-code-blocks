@@ -13,7 +13,7 @@ This is very simple by using a text block on each page:
 
 Note that the "active" class shows the current stage in the process.
 
-An example style is below - this adds the numbers into circles and an underline in red:
+An example style is below - this changes the numbers into circles and adds an underline in the submit button's colour (if using the Free and Flexible templates):
 
 ```css
 /* Page progress */
