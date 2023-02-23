@@ -96,3 +96,6 @@ https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/tls-che
 
 Show the supporter's MP name on a non-email-to-target page
 https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/show-MP-name-on-data-capture.md
+
+Add a shopping list/money-buys to show when certain donation amounts are chosen
+https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/shopping-list-money-buys.md
