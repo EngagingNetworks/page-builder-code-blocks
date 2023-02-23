@@ -20,7 +20,6 @@ const showPrompt = (radioValue, radioRecurring) => {
 const checkRadio = () => {
     const currentRadioValue = $(".en__field--donationAmt input:checked").val();
     const currentRadioRecurring = $(".en__field--recurrpay input:checked").val();
-    console.log("checkRadio currentRadioValue = " + currentRadioValue);
     showPrompt(currentRadioValue, currentRadioRecurring);
 }       
 
