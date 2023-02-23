@@ -22,7 +22,7 @@ $(function() {
 
 There are many other options available, so check out Selectize's documentation.
 
-##Styling
+## Styling
 
 Some example stylings for the selectize box:
 
