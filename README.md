@@ -99,3 +99,6 @@ https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/show-MP
 
 Add a shopping list/money-buys to show when certain donation amounts are chosen
 https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/shopping-list-money-buys.md
+
+Show progress through a campaign
+https://github.com/EngagingNetworks/page-builder-code-blocks/blob/master/progress-through-campaign-pages.md
