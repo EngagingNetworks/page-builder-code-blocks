@@ -1,0 +1,97 @@
+<script>
+    window.onload = loadStartDates();
+    
+    function loadStartDates() {
+        
+        // ================== VARIABLES YOU CAN CHANGE =========================
+        // ==== you need to only change these 3. They should all be numbers ====
+        var numberOfOptions = 3; // the number of choices in the select you want to give, each separated by a month, e.g. 2
+        var daysAhead = 15; // the number of days from today we can start a new DD from, e.g. 10
+        var forceDayOfMonth = 21; // set to 0 if you are happy with any day of the month, set to 1-28 if you want to force the start date(s) to be on a certain day of the month, e.g. 1
+        // =====================================================================
+        
+        // Other variables 
+    	var options = []; // the possible choices
+    	var monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
+    	// Get the earliest start date to compare against
+        var earliestDate = new Date();
+    	earliestDate.setDate(earliestDate.getDate() + daysAhead);
+    	// Possible parts of earliest date
+    	var day = earliestDate.getDate();
+    	var month = earliestDate.getMonth(); // months run 0-11
+    	var year = earliestDate.getFullYear();
+    	//  advance the earliestDate to the next day of month if set
+    	if (forceDayOfMonth && day != forceDayOfMonth) {
+    	    if (day < forceDayOfMonth) {
+    	        // the day is too early
+    	        day = forceDayOfMonth;
+    	    } else {
+    	        // the day is too late
+        		month++;
+    		    day = forceDayOfMonth;	        
+    	    }
+    	}
+    	//  advance the earliestDate to January if month is 12
+    	if (month > 11) { // gone too far
+    		year++;
+    		month = 0;
+    	}
+    	earliestDate = new Date(year, month, day);
+    	// Add this to the array
+    	options.push(earliestDate);
+    	// Create the next possible date(s)
+    	while (options.length < numberOfOptions) {
+    		// Advance to next possible date
+    		month++;
+    		if (month == 12) {
+    			year++;
+    			month = 0;
+    		}
+    		newDate = new Date(year, month, day);
+    		options.push(newDate);
+    	}
+    	// Clear the select of values
+		var startDateSelect = document.querySelector("#en__field_transaction_recurrstart");
+    	removeOptions(document.getElementById("en__field_transaction_recurrstart"));
+        // Populate
+    	var optionDate;
+    	var fullDate; // display date
+    	var valueDate; // value stored
+    	for (var option = 0; option < options.length; option++) {
+    		optionDate = options[option];
+    		day = optionDate.getDate();
+    		month = optionDate.getMonth() + 1;
+    		year = optionDate.getFullYear();
+    		fullDate = day + ' ' + monthNames[month - 1] + ' ' + year; 
+    		if( day < 10 ) {
+    			day = "0" + day  + "";
+    		}
+    		if( month < 10 ) {
+    			month = "0" + month  + "";
+    		}
+    		valueDate = year +"-" + month + "-" + day; 
+    		
+    		//startDateSelect.append('<option value="' + valueDate + '">' + fullDate + '</option>'); //  format yyyy-mm-dd
+    		var $opt = document.createElement('option');
+            $opt.value = valueDate;
+            $opt.label = fullDate;
+            startDateSelect.appendChild($opt);
+    	}
+        // Recurring Day field
+        document.getElementById("en__field_transaction_recurrday").value = day;
+    }
+    
+    function removeOptions(selectElement) {
+       var i, L = selectElement.options.length - 1;
+       for(i = L; i >= 0; i--) {
+          selectElement.remove(i);
+       }
+    }
+    
+
+</script>
+<style>
+    .en__field--recurrday {
+        display: none !important;
+    }
+</style>
