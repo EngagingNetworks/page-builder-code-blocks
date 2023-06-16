@@ -31,8 +31,13 @@
     		    day = forceDayOfMonth;	        
     	    }
     	}
-    	//  advance the earliestDate to January if month is 12
-    	if (month > 11) { // gone too far
+    	// advance the earliestDate to 1 of next month is day >28
+    	if (day > 28) { 
+    		month++;
+    		day = 1;
+    	}    
+    	// advance the earliestDate to January if month is 12
+    	if (month > 11) {
     		year++;
     		month = 0;
     	}
