@@ -97,7 +97,6 @@ Code:
     $( document ).ready(function() {
         // show the shopping list depending on the donation value:
         const showPrompt = (radioValue) => {
-            console.log("showPrompt called");
             if (radioValue=="Other") {
                 radioValue = $("input[name='transaction.donationAmt.other']").val();
             }
