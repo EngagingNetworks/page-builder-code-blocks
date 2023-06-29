@@ -62,6 +62,9 @@
     	var optionDate;
     	var fullDate; // display date
     	var valueDate; // value stored
+	// Recurring Day field
+        document.getElementById("en__field_transaction_recurrday").value = day;
+	// Options
     	for (var option = 0; option < options.length; option++) {
     		optionDate = options[option];
     		day = optionDate.getDate();
@@ -82,8 +85,6 @@
             $opt.label = fullDate;
             startDateSelect.appendChild($opt);
     	}
-        // Recurring Day field
-        document.getElementById("en__field_transaction_recurrday").value = day;
     }
     
     function removeOptions(selectElement) {
