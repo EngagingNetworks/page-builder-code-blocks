@@ -2,6 +2,7 @@
 You might want to have a page that has a "shopping list" or "money-buys" for different amounts chosen, e.g. "£20 could pay for a a water filtration kit". 
 This can be done via some JavaScript (using jQuery) and CSS, then a text block with bulleted items where you set the text.
 
+## To accept single and recurring (via Reccuring Payment field)
 To do that, you need code like this:
 
 ```html
@@ -84,5 +85,55 @@ For example, ```<li data-amount="5" data-rec="N">``` will show when the donation
 	<li data-amount="25" data-rec="Y"><strong>&pound;25 could pay</strong> for xxx...</li>
 	<li data-amount="50" data-rec="Y"><strong>&pound;50 could pay</strong> for xxx...</li>
 	<li data-amount="100" data-rec="Y"><strong>&pound;100 could pay</strong> for xxx...</li>
+</ul>
+```
+
+## To accept one-off donations only (you don't have a Recurring Payment field on the page)
+
+Code:
+
+```html
+<script>
+    $( document ).ready(function() {
+        // show the shopping list depending on the donation value:
+        const showPrompt = (radioValue) => {
+            console.log("showPrompt called");
+            if (radioValue=="Other") {
+                radioValue = $("input[name='transaction.donationAmt.other']").val();
+            }
+            $('.en__component--copyblock.prompts ul').find('li').each(function () {
+                if ( ($(this).data("amount") == radioValue) ){
+                    $(this).css("display","list-item");
+                } else {
+                    $(this).css("display","none");
+                }
+            })
+        }
+        
+        // get the values of the amount
+        const checkRadio = () => {
+            const currentRadioValue = $(".en__field--donationAmt input:checked").val();
+            showPrompt(currentRadioValue);
+        }       
+        
+        // call the function on donation amount change
+        $(document).on("change",".en__field--donationAmt input",function(){
+            checkRadio();
+        });
+        
+        checkRadio();
+    });
+</script>
+```
+
+Style is the same, HTML of the prompts block is:
+
+```html
+<ul>
+	<li data-amount="5"><strong>&pound;5 could pay</strong> for xxx...</li>
+	<li data-amount="10"><strong>&pound;10&nbsp;could pay</strong> for xxx...</li>
+	<li data-amount="25"><strong>&pound;25 could pay</strong> for xxx...</li>
+	<li data-amount="50><strong>&pound;50 could pay</strong> for xxx...</li>
+	<li data-amount="100"><strong>&pound;100 could pay</strong> for xxx...</li>
 </ul>
 ```
