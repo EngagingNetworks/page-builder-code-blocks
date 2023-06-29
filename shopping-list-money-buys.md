@@ -4,60 +4,74 @@ This can be done via some JavaScript (using jQuery) and CSS, then a text block w
 
 To do that, you need code like this:
 
-```js
-// show the shopping list depending on the donation value and whether it is recurring or not:
-const showPrompt = (radioValue, radioRecurring) => {
-    $('.en__component--copyblock.prompts ul').find('li').each(function () {
-        if ( ($(this).data("amount") == radioValue) && ($(this).data("rec") == radioRecurring) ){
-            $(this).css("display","list-item");
-        } else {
-            $(this).css("display","none");
+```html
+<script>
+    $( document ).ready(function() {
+        // show the shopping list depending on the donation value and whether it is recurring or not:
+        const showPrompt = (radioValue, radioRecurring) => {
+            console.log("showPrompt called");
+            if (radioValue=="Other") {
+                radioValue = $("input[name='transaction.donationAmt.other']").val();
+            }
+            console.log("showPrompt: value=" + radioValue + " recur = " + radioRecurring);
+            $('.en__component--copyblock.prompts ul').find('li').each(function () {
+                if ( ($(this).data("amount") == radioValue) && ($(this).data("rec") == radioRecurring) ){
+                    $(this).css("display","list-item");
+                } else {
+                    $(this).css("display","none");
+                }
+            })
         }
-    })
-}
-
-// get the values of the amount and recurring-ness
-const checkRadio = () => {
-    const currentRadioValue = $(".en__field--donationAmt input:checked").val();
-    const currentRadioRecurring = $(".en__field--recurrpay input:checked").val();
-    showPrompt(currentRadioValue, currentRadioRecurring);
-}       
-
-// call the function on donation amount change
-$(".en__field--donationAmt input").change(function() {
-    checkRadio();
-});
-
-// call the function on recurring change
-$(".en__field--recurrpay input").change(function() {
-    checkRadio();
-});
-
-checkRadio();
-});
+        
+        // get the values of the amount and recurring-ness
+        const checkRadio = () => {
+            console.log("checkRadio called");
+            const currentRadioValue = $(".en__field--donationAmt input:checked").val();
+            const currentRadioRecurring = $(".en__field--recurrpay input:checked").val();
+            console.log("checkRadio: value=" + currentRadioValue + " recur = " + currentRadioRecurring);
+            showPrompt(currentRadioValue, currentRadioRecurring);
+        }       
+        
+        // call the function on donation amount change
+        $(document).on("change",".en__field--donationAmt input",function(){
+            console.log("amount change");
+            checkRadio();
+        });
+        
+        // call the function on recurring change
+        $(document).on("change",".en__field--recurrpay input",function(){
+            console.log("recur change");
+            checkRadio();
+        });
+        
+        checkRadio();
+    });
+</script>
 ```
 
 Then, add this CSS to style the prompts:
 
-```css
-body#en__pagebuilder .en__component--copyblock.prompts::before {
-    /* This only shows in the page-builder so you can edit the text block */
-    content: "Edit money-buys prompts (use Source to set the amount and recurring flags)";
-    text-align: center;
-    font-weight: bold;
-    color: #666;
-    background-color: #eee;
-    padding: 2em;
-    display: block;
-}
-.en__component--copyblock.prompts ul {
-    padding: 0;
-}
-.en__component--copyblock.prompts li {
-    display: none;
-    list-style-type: none;
-    text-align: center;
-}
+```html
+<style>
+    body#en__pagebuilder .en__component--copyblock.prompts::before {
+        /* This only shows in the page-builder so you can edit the text block */
+        content: "Edit money-buys prompts (use Source to set the amount and recurring flags)";
+        text-align: center;
+        font-weight: bold;
+        color: #666;
+        background-color: #eee;
+        padding: 2em;
+        display: block;
+    }
+    .en__component--copyblock.prompts ul {
+        padding: 0;
+    }
+    .en__component--copyblock.prompts li {
+        display: none;
+        list-style-type: none;
+        text-align: center;
+    }
+</style>
 ```
 
 Then you add a text block, with a class of "prompts". 
