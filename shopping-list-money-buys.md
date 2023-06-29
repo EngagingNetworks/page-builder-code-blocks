@@ -9,11 +9,9 @@ To do that, you need code like this:
     $( document ).ready(function() {
         // show the shopping list depending on the donation value and whether it is recurring or not:
         const showPrompt = (radioValue, radioRecurring) => {
-            console.log("showPrompt called");
             if (radioValue=="Other") {
                 radioValue = $("input[name='transaction.donationAmt.other']").val();
             }
-            console.log("showPrompt: value=" + radioValue + " recur = " + radioRecurring);
             $('.en__component--copyblock.prompts ul').find('li').each(function () {
                 if ( ($(this).data("amount") == radioValue) && ($(this).data("rec") == radioRecurring) ){
                     $(this).css("display","list-item");
@@ -25,22 +23,18 @@ To do that, you need code like this:
         
         // get the values of the amount and recurring-ness
         const checkRadio = () => {
-            console.log("checkRadio called");
             const currentRadioValue = $(".en__field--donationAmt input:checked").val();
             const currentRadioRecurring = $(".en__field--recurrpay input:checked").val();
-            console.log("checkRadio: value=" + currentRadioValue + " recur = " + currentRadioRecurring);
             showPrompt(currentRadioValue, currentRadioRecurring);
         }       
         
         // call the function on donation amount change
         $(document).on("change",".en__field--donationAmt input",function(){
-            console.log("amount change");
             checkRadio();
         });
         
         // call the function on recurring change
         $(document).on("change",".en__field--recurrpay input",function(){
-            console.log("recur change");
             checkRadio();
         });
         
