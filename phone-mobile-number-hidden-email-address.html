@@ -1,0 +1,17 @@
+<!-- REQUIRES JQUERY LIBRARY -->
+<!-- Since email address is required, it can be hard to create a page to take just a phone/mobile number -->
+<!-- This code will hide the email address field and use their number to create a unique email address -->
+<!-- The format will be PHONE_NUMBER@noaddress.com -->
+<style>
+  /* hide the email address field */
+  .en__field--emailAddress {
+    display: none;
+  }
+</style>
+<script>
+  // When the phone number field changes, add it to the email address with @noaddress.ea at the end 
+  $(document).on("change", "#en__field_supporter_phoneNumber2", function() {
+		  $("#en__field_supporter_emailAddress").val($("#en__field_supporter_phoneNumber2").val() + "@noaddress.ea");
+	  }
+  );
+</script>
