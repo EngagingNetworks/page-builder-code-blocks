@@ -10,7 +10,7 @@ https://secure.engagingnetworks.net/page/47877/petition/1?mode=DEMO&locale=en-GB
 In that example, it uses a code block to call CDN files (this applies to all Selects - you can change this to be more specific via the .selectize() line in this code):
 
 ```html
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1757/selectize-standalone.js?v=1567417278000"></script>
 <link rel="stylesheet" type="text/css" href="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1757/selectize.css?v=1567417051000" />
 <script>
