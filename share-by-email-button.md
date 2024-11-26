@@ -4,7 +4,7 @@ The social share channels available are Facebook, Twitter, LinkedIn and WhatsApp
 
 If you add this code to the bottom of the page, below the social buttons then it'll do this for you. Adjust the settings for the email variables for your own content:
 
-Remember to add <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> to the code if you have not already loaded the jQuery library
+Remember to add <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> to the code if you have not already loaded the jQuery library
 
 ```html
 <script>
