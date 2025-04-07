@@ -1,16 +1,23 @@
 <script>
-	// Adds placeholders to text boxes automatically from their labels
-	$('.en__field--text, .en__field--email').each(function() {
-		// Get input and label text
-		var input = $(this).find('input');
-		var label = $(this).find('label');
-		var labelText = label.text();
-		// Hide label so only placeholders are used
-		label.hide();
-		// Add * to placeholder if mandatory
-		if ( input.parent().parent().hasClass("en__mandatory") ) {
-			labelText += "*";
-		}
-		input.attr('placeholder', labelText);
-	});
+document.addEventListener('DOMContentLoaded', function () {
+    const fields = document.querySelectorAll('.en__field--text, .en__field--email');
+
+    fields.forEach(function (field) {
+        const input = field.querySelector('input');
+        const label = field.querySelector('label');
+
+        if (input && label) {
+            let labelText = label.textContent || '';
+            // Hide the label
+            label.style.display = 'none';
+
+            // Check if it's a mandatory field
+            if (field.classList.contains('en__mandatory')) {
+                labelText += '*';
+            }
+
+            input.setAttribute('placeholder', labelText.trim());
+        }
+    });
+});
 </script>
