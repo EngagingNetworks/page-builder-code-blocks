@@ -4,11 +4,53 @@ One way is to add a code block with the following code:
 
 ```html
 <script>
-$('input[name="transaction.donationAmt"], input[name="transaction.donationAmt.other"]').change(function(){
-  var val = $('input[name="transaction.donationAmt"]:checked').val() == "Other" ? $('input[name="transaction.donationAmt.other"]').val() : $('input[name="transaction.donationAmt"]:checked').val();
-  if(val <= 0){ val = 1; }
-  $('.gift-aid p strong.donation-amt').html("£" + val);
-  $('.gift-aid p strong.gift-aid-val').html("£" + (+val + (+val * 20 / 80)).toFixed(2));
+document.addEventListener('DOMContentLoaded', function () {
+
+    // Function to update donation and Gift Aid values
+    function updateGiftAidDisplay() {
+        const donationRadios = document.querySelectorAll('input[name="transaction.donationAmt"]');
+        const otherInput = document.querySelector('input[name="transaction.donationAmt.other"]');
+        let selectedValue = "0";
+
+        // Find the checked radio
+        const checkedRadio = Array.from(donationRadios).find(r => r.checked);
+
+        if (checkedRadio && checkedRadio.value === "Other" && otherInput) {
+            selectedValue = otherInput.value;
+        } else if (checkedRadio) {
+            selectedValue = checkedRadio.value;
+        }
+
+        let val = parseFloat(selectedValue);
+        if (isNaN(val) || val <= 0) val = 1;
+
+        const donationAmtEl = document.querySelector('.gift-aid p strong.donation-amt');
+        const giftAidValEl = document.querySelector('.gift-aid p strong.gift-aid-val');
+
+        if (donationAmtEl) donationAmtEl.textContent = "£" + val;
+        if (giftAidValEl) giftAidValEl.textContent = "£" + (val + (val * 20 / 80)).toFixed(2);
+    }
+
+    // Attach listeners to donation radios, other input, and recurrpay radios
+    document.addEventListener('change', function (event) {
+        if (
+            event.target.name === 'transaction.donationAmt' ||
+            event.target.name === 'transaction.donationAmt.other' ||
+            event.target.name === 'transaction.recurrpay'
+        ) {
+            updateGiftAidDisplay();
+        }
+    });
+
+    // For real-time updates on typing into "Other" field
+    const otherInput = document.querySelector('input[name="transaction.donationAmt.other"]');
+    if (otherInput) {
+        otherInput.addEventListener('input', updateGiftAidDisplay);
+    }
+
+    // Trigger once on load
+    updateGiftAidDisplay();
+
 });
 </script>
 ```
